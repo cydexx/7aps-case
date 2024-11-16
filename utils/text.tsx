@@ -9,7 +9,7 @@ export function highlightText(
 	const parts = text.split(new RegExp(`(${highlight})`, "gi"))
 	return parts.map((part, i) =>
 		part.toLowerCase() === highlight.toLowerCase() ? (
-			<Text key={i} className="font-bold">
+			<Text key={i} className="font-extrabold">
 				{part}
 			</Text>
 		) : (
