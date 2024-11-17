@@ -14,7 +14,7 @@ function SelectedCharacter({
 			entering={FadeIn}
 			exiting={FadeOut}
 			key={character.id}
-			className="bg-black-700 border-black-500 rounded-lg px-3 py-1.5 flex-row items-center border shadow-sm border-zinc-700"
+			className="bg-black-700 border-black-500 rounded-lg px-3 py-2 flex-row items-center border shadow-sm border-zinc-700"
 		>
 			<Text className="mr-2 font-medium text-white">
 				{character.name}
