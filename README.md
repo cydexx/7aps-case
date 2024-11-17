@@ -2,6 +2,8 @@
 
 A React Native application built with Expo that implements a multi-select autocomplete component to search for characters from the Rick and Morty API.
 
+<img src="https://github.com/user-attachments/assets/06bfa7f5-f079-4e5e-bfcc-22de7c1a0c87" alt="Screenshot" width="300" />
+
 ## Features
 
 -   🔍 Real-time character search with API integration
@@ -93,3 +95,5 @@ The app uses the Rick and Morty API to fetch character data:
 
 -   Base URL: `https://rickandmortyapi.com/api`
 -   Endpoint: `/character`
+
+https://github.com/user-attachments/assets/0ec04401-3759-4d10-9c8f-b4b9f2716c2a
