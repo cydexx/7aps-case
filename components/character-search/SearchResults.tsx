@@ -7,7 +7,13 @@ import {
 	Image,
 } from "react-native"
 import { Ionicons } from "@expo/vector-icons"
-import Animated, { SlideInDown, SlideOutDown } from "react-native-reanimated"
+import Animated, {
+	FadeIn,
+	FadeOut,
+	SlideInDown,
+	SlideOutDown,
+	withSpring,
+} from "react-native-reanimated"
 import { Character } from "@/types"
 
 interface SearchResultsProps {
@@ -39,8 +45,14 @@ function SearchResults({
 }: SearchResultsProps) {
 	return (
 		<Animated.View
-			entering={SlideInDown.springify()}
-			exiting={SlideOutDown}
+			entering={FadeIn.duration(200)
+				.springify()
+				.withInitialValues({
+					transform: [{ translateY: 20 }],
+				})}
+			exiting={FadeOut.duration(150).withInitialValues({
+				transform: [{ translateY: 0 }],
+			})}
 			className="absolute top-full left-0 right-0 mt-2 z-50"
 			style={{
 				shadowColor: "#000",
