@@ -60,6 +60,7 @@ function SearchResults({
 							<SearchResultsSkeletonItem />
 							<SearchResultsSkeletonItem />
 							<SearchResultsSkeletonItem />
+							<SearchResultsSkeletonItem />
 						</>
 					)}
 					{error && (
