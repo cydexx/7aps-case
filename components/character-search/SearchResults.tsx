@@ -1,20 +1,8 @@
-import {
-	View,
-	Text,
-	ScrollView,
-	ActivityIndicator,
-	TouchableOpacity,
-	Image,
-} from "react-native"
+import { View, Text, ScrollView, TouchableOpacity, Image } from "react-native"
 import { Ionicons } from "@expo/vector-icons"
-import Animated, {
-	FadeIn,
-	FadeOut,
-	SlideInDown,
-	SlideOutDown,
-	withSpring,
-} from "react-native-reanimated"
+import Animated, { FadeIn, FadeOut } from "react-native-reanimated"
 import { Character } from "@/types"
+import SearchResultsSkeletonItem from "./Skeleton"
 
 interface SearchResultsProps {
 	isLoading: boolean
@@ -68,14 +56,16 @@ function SearchResults({
 					keyboardShouldPersistTaps="handled"
 				>
 					{isLoading && (
-						<View className="p-4 flex items-center justify-center">
-							<ActivityIndicator color="#fff" size="large" />
-						</View>
+						<>
+							<SearchResultsSkeletonItem />
+							<SearchResultsSkeletonItem />
+							<SearchResultsSkeletonItem />
+						</>
 					)}
 					{error && (
 						<View className="p-4 bg-red-500/10 border-l-4 border-red-500">
 							<Text className="text-red-500 font-medium">
-								Error loading characters
+								Character cannot be found.
 							</Text>
 						</View>
 					)}
