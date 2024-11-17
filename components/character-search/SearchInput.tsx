@@ -17,9 +17,9 @@ function SearchInput({
 	onFocus,
 }: SearchInputProps) {
 	return (
-		<View className="flex-1 flex-row items-center">
+		<View className="flex-1 min-w-[120px] flex-row items-center">
 			<TextInput
-				className="flex-1 min-w-[100px] text-white px-1"
+				className="flex-1 text-white px-1"
 				placeholder="Search characters..."
 				placeholderTextColor="#6B7280"
 				value={query}
