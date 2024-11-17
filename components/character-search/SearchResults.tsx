@@ -42,13 +42,6 @@ function SearchResults({
 				transform: [{ translateY: 0 }],
 			})}
 			className="absolute top-full left-0 right-0 mt-2 z-50"
-			style={{
-				shadowColor: "#000",
-				shadowOffset: { width: 0, height: 2 },
-				shadowOpacity: 0.25,
-				shadowRadius: 3.84,
-				elevation: 5,
-			}}
 		>
 			<View className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
 				<ScrollView
